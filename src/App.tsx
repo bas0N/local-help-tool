@@ -13,15 +13,17 @@ const App: React.FC = () => {
     <div className="App">
       <>
         <Router>
-          <Routes>
-            <Route path="/" element={<Explore />} />
-            <Route path="/offers" element={<Offers />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/sign-in" element={<SignIn />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/forgot-password" element={<ForgotPassword />} />
-          </Routes>
-          {<Navbar />}
+          <div className="flex flex-col justify-between h-screen">
+            <Routes>
+              <Route path="/" element={<Explore />} />
+              <Route path="/offers" element={<Offers />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/sign-in" element={<SignIn />} />
+              <Route path="/sign-up" element={<SignUp />} />
+              <Route path="/forgot-password" element={<ForgotPassword />} />
+            </Routes>
+            {<Navbar />}
+          </div>
         </Router>
       </>
     </div>
