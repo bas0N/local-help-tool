@@ -3,13 +3,13 @@ import React, { useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "@mui/material";
 import { setDoc, doc, serverTimestamp, FieldValue } from "firebase/firestore";
-
 import {
   getAuth,
   createUserWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
 import { db } from "../firebase.config";
+import OAuth from "../Components/OAuth";
 function SignUp() {
   type FormType = {
     email: string;
@@ -191,7 +191,7 @@ function SignUp() {
             Sign Up
           </Button>
         </form>
-        {/*Google oAuth */}
+        <OAuth />
         <Link className="self-center mt-6" href="/sign-in">
           Sign In Instead
         </Link>

@@ -3,6 +3,7 @@ import React, { useState, ChangeEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link } from "@mui/material";
+import OAuth from "../Components/OAuth";
 
 function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
@@ -71,7 +72,7 @@ function SignIn() {
             Sign In
           </Button>
         </form>
-        {/*Google oAuth */}
+        <OAuth />
         <Link className="self-center mt-6" href="/sign-up">
           Sign Up Instead
         </Link>
