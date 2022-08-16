@@ -26,6 +26,7 @@ function Profile() {
   // console.log();
   console.log(auth.currentUser?.uid);
   const userRef = doc(db, "users", auth.currentUser?.uid as string);
+  //get data from db
   const execute = async () => {
     const docolo = await getDoc(userRef);
     console.log(docolo.data());
